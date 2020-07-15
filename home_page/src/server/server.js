@@ -2,6 +2,7 @@ const express = require('express');
 const db = require('./../dataVideo/dataVideo');
 var cors = require('cors');
 var bodyParser = require('body-parser')
+const path = require('path');
 // db.db();
 /////to save it in db //////
 let videoModel = db.videoModel;
@@ -15,6 +16,14 @@ app.use(express.json());
 //connect front and back
 app.use(express.static(__dirname + './../../public'));
 
+// for deployment 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static( './../../public' ));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, './../../public')); // relative path
+    });
+}
 
 
 
