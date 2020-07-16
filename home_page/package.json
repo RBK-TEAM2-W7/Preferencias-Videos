@@ -16,7 +16,7 @@
   
  
   "scripts": {
-    “heroku-postbuild”:“NPM_CONFIG_PRODUCTION=false npm install”,
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

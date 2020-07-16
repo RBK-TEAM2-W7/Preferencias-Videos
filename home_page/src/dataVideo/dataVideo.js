@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-var MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost/videolist";
+var MONGODB_URI = process.env.MONGODB_URL || "mongodb+srv://djayyab:doaa123@cluster0.sbk85.mongodb.net/videolist";
 
 
-    mongoose.connect(MONGODB_URI,{useNewUrlParser:true}).then(()=>{
+    mongoose.connect(MONGODB_URI,{useUnifiedTopology: true} ).then(()=>{
     console.log("DB Connect");
 }).catch(err =>{
     console.log("Erorr",err);
