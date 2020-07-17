@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
 
-
-    mongoose.connect('mongodb://localhost/videolist',{useNewUrlParser:true}).then(()=>{
+mongoose.connect('mongodb://localhost/videolist',{useNewUrlParser:true}).then(()=>{
     console.log("DB Connect");
-}).catch(err =>{
-    console.log("Erorr",err);
-});
+	}).catch(err =>{
+	    console.log("Erorr",err);
+	});
 var db = mongoose.connection
 
 let videoSchema = mongoose.Schema({
