@@ -19,7 +19,8 @@ class Searchbar extends React.Component {
         
         return (
             <>
-            <h2  style={{textAlign:"center"}}>Home</h2>
+            <br></br>
+            <h2  style={{textAlign:"center"}}>Preference Movies</h2>
             <div id="divB">
             <button id="buttom" className="">Go To Your Favorite list</button>
             </div>

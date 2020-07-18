@@ -44,7 +44,7 @@ const VideoDetail = ({ video }) => {
         <iframe src={videoSrc} allowFullScreen title="Video player" />
       </div>
       <div className="ui segment">
-        <p>{video.snippet.description}</p>        
+        <h5 >{video.snippet.description}</h5>        
         <button onClick ={xadd.bind()}>Add To  Your Favorite list  </button>
       </div>
     </div>
