@@ -1,12 +1,19 @@
 const mongoose = require('mongoose');
 
+ var MONGODB_URI = process.env.MONGODB_URL || "mongodb+srv://djayyab:doaa123@cluster0.sbk85.mongodb.net/videolist";
 
-    mongoose.connect('mongodb://localhost/videolist',{useNewUrlParser:true}).then(()=>{
-    console.log("DB Connect");
-}).catch(err =>{
-    console.log("Erorr",err);
-});
-var db = mongoose.connection
+
+    mongoose.connect(MONGODB_URI,{useUnifiedTopology: true} )
+//     .then(()=>{
+//     console.log("DB Connect");
+//       })
+// .catch(err =>{
+//     console.log("Erorr",err);
+// });
+const db = mongoose.connection
+
+mongoose.connection.once('open', () => { console.log('MongoDB Connected'); });
+mongoose.connection.on('error', (err) => { console.log('MongoDB connection error: ', err); });
 
 let videoSchema = mongoose.Schema({
     linkVideo:{type:String },
@@ -17,7 +24,7 @@ let videoSchema = mongoose.Schema({
     
 });
 ////Videos colection data
-let videoModel =mongoose.model("Videos",videoSchema);
+let videoModel = mongoose.model("Videos",videoSchema);
 ///pass value to test database and save it
 // let videoDoc = new videoModel ({
 //     linkVideo :'https://www.youtube.com/embed/YB3xASruJHE' ,
