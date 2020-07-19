@@ -18,3 +18,9 @@ We use Heroku to deployment [arbkproject][1].
 Demo for current work [Demo][1].
 
 [1]: https://drive.google.com/file/d/1xYRdO9K9NbAxN5Fx1CPSc6QFPujQXDI5/view?usp=sharing  
+
+## Team members and management 
+
+How we management the team here's the [trello link][1].
+
+[1]: https://trello.com/b/fgg9ANek/preferencias-movies
