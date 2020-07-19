@@ -17,13 +17,13 @@ app.use(express.json());
 app.use(express.static(__dirname + './../../public'));
 
 // for deployment 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static( './../../public' ));
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static( './../../public' ));
 
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, './../../public')); // relative path
-    });
-}
+//     app.get('*', (req, res) => {
+//         res.sendFile(path.join(__dirname, './../../public')); // relative path
+//     });
+// }
 
 
 
@@ -50,7 +50,57 @@ if (process.env.NODE_ENV === 'production') {
      }); 
 });//test
 
-var port = process.env.PORT ||6000;
+
+//display fav list
+// app.get('/favList',(req,res) => {
+//     ​
+//             videoModel.find({})
+//             .then((result) => {
+//                 res.send(result);
+//             })
+//             .catch((err) => {
+//                 res.send(err);
+            
+//             })
+//             })
+        
+    // Edit in fav list link
+        // app.put('/update/:linkVideo',(req,res) => {
+        //     videoModel.findOneAndUpdate({linkVideo:req.params.linkVideo},req.body)
+        //    .then(() => {
+        //      res.send('Update it');
+        //    })
+        //    .catch((err) => {
+        //      res.send(err);
+        //      console.log("Cont Get this sarch")
+        //    })
+        //  });
+    //Delete one from fav list
+    //     app.delete('/removeOne',function(req,res){
+    //         const number = req.params.number;
+    //         videoModel.find({})
+    //         .deleteOne({}).then((result)=>{
+    //         res.send("DeleteOne");
+    //         })
+    //         .catch((err)=>{
+    //         res.send(err)
+    //         })
+    //     });
+    // ​
+    
+
+
+
+
+
+var port = 6000;
 app.listen(port,()=>{
     console.log("Port",port)
 }); 
+
+
+
+
+
+
+

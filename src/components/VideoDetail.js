@@ -23,7 +23,7 @@ const VideoDetail = ({ video }) => {
   //save
   function xadd (e){
     axios
-    .post('http://localhost:5000/save' ,obj)
+    .post('http://localhost:6000/save' ,obj)
     .then(()=>{
     console.log("done")
   })
